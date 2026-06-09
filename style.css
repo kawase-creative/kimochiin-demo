@@ -509,3 +509,65 @@ footer{padding:14px 0;}
 @media (max-width:600px){
   .event-program-card h3 span{display:inline;white-space:normal;}
 }
+
+
+/* v17: スマホ最適化：ヒーロー画像を切らずに表示、重複SEOセクション削除後の余白調整 */
+@media (max-width:768px){
+  .site-header{position:sticky;}
+  .header-inner{padding:8px 0;}
+  .logo img{width:135px;}
+  .nav{display:none;}
+  .header-contact span,.header-contact small{display:none;}
+  .header-contact a{padding:7px 12px;font-size:12px;}
+
+  .hero{background:#fbf7ed;}
+  .hero-frame{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    overflow:hidden;
+  }
+  .hero:before{display:none !important;}
+  .hero-bg{
+    order:2;
+    width:100%;
+    height:auto !important;
+    min-height:0 !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+    filter:none !important;
+  }
+  .hero-overlay{
+    order:1;
+    position:relative !important;
+    left:auto !important;
+    top:auto !important;
+    transform:none !important;
+    width:100% !important;
+    padding:28px 6% 20px !important;
+    background:linear-gradient(180deg,#fffdf8 0%,#fbf7ed 100%);
+  }
+  .hero-catch{font-size:15px;margin-bottom:8px;}
+  .hero-overlay h1.hero-title{font-size:28px;line-height:1.45;margin-bottom:12px;letter-spacing:.02em;}
+  .hero-title-line{display:block;white-space:normal;}
+  .hero-lead{display:block !important;font-size:13px;line-height:1.75;margin-bottom:16px;}
+  .hero-btn{width:100%;padding:12px 14px;font-size:13px;}
+
+  .trust-strip{padding:10px 0;}
+  .trust-grid{grid-template-columns:repeat(2,1fr) !important;gap:8px;}
+  .trust-grid div{border:0 !important;padding:6px 4px !important;}
+  .trust-grid strong{font-size:14px;line-height:1.35;}
+  .trust-grid span{font-size:10px;line-height:1.45;}
+
+  .section{padding:38px 0;}
+  .worry-card{padding:14px;}
+  .worry-card img{height:120px;}
+  .effect-grid article{padding:18px;}
+  .effect-grid img{width:125px;height:125px;}
+  .policy-section{padding-top:34px;padding-bottom:34px;}
+  .policy-layout p{font-size:14px;line-height:1.85;}
+}
+
+@media (min-width:769px) and (max-width:980px){
+  .hero-bg{height:auto !important;min-height:0 !important;object-fit:contain !important;}
+}
