@@ -81,3 +81,181 @@ body{
     width:min(100%,320px);
   }
 }
+
+/* Responsive refinement: keep the mobile-first layout comfortable on tablets. */
+@media (min-width:700px) and (max-width:1023px){
+  body{
+    padding-bottom:74px;
+  }
+  .container{
+    width:min(100% - 40px,900px);
+  }
+  .header-inner{
+    min-height:64px;
+    padding:8px 0;
+  }
+  .logo{
+    flex:0 0 auto;
+  }
+  .logo img{
+    width:150px;
+  }
+  .nav,
+  .header-contact{
+    display:none;
+  }
+  .fixed-contact{
+    display:flex;
+  }
+  footer{
+    padding-bottom:84px;
+  }
+  .hero-frame{
+    width:100%;
+  }
+  .hero-overlay{
+    left:5%;
+    width:min(420px,48%);
+  }
+  .hero-title{
+    font-size:clamp(30px,4.5vw,38px);
+  }
+  .hero-btn{
+    padding:12px 16px;
+    font-size:13px;
+    white-space:nowrap;
+  }
+  .trust-grid,
+  .worry-grid,
+  .effect-grid,
+  .flow-grid,
+  .detail-card-grid,
+  .detail-flow{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .reason-layout,
+  .access-grid,
+  .detail-hero-grid,
+  .target-layout,
+  .price-layout,
+  .visit-grid{
+    grid-template-columns:1fr;
+  }
+  .reason-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+  }
+  .reason-grid article{
+    border:1px solid #eee0ce;
+    border-radius:16px;
+    box-shadow:0 8px 18px rgba(88,61,35,.05);
+  }
+  .profile-layout{
+    grid-template-columns:200px 1fr;
+  }
+  .profile-layout>img{
+    width:190px;
+  }
+  .event-hero{
+    grid-template-columns:1fr 1fr;
+  }
+  .event-program-grid{
+    grid-template-columns:1fr;
+  }
+  .event-program-card{
+    grid-template-columns:minmax(0,1fr) 180px;
+    min-height:0;
+  }
+  .event-program-card h3,
+  .event-program-card p{
+    min-height:0;
+  }
+  .event-program-illust,
+  .selfcare-card .event-program-illust{
+    width:180px;
+    height:180px;
+  }
+  .event-info-bar{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .event-info-bar>div:first-child{
+    grid-column:1 / -1;
+  }
+  .event-info-bar>div:nth-child(2n){
+    border-left:0;
+    padding-left:0;
+  }
+  .voice-grid,
+  .more-voice-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .closing-inner{
+    grid-template-columns:120px 1fr;
+  }
+  .closing-person{
+    width:115px;
+  }
+  .page-top-btn{
+    grid-column:1 / -1;
+    justify-self:center;
+  }
+  .detail-hero h1{
+    font-size:36px;
+  }
+  .detail-hero img{
+    max-height:460px;
+  }
+}
+
+/* Small-screen usability and natural Japanese line wrapping. */
+@media (max-width:699px){
+  .detail-page h1,
+  .detail-page h2,
+  .detail-page h3,
+  .detail-page p,
+  .detail-page li{
+    word-break:normal;
+    overflow-wrap:anywhere;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    min-height:44px;
+  }
+  .faq-list summary{
+    display:flex;
+    align-items:center;
+    min-height:44px;
+  }
+  .source-section a{
+    display:inline-block;
+    padding:6px 0;
+  }
+  .fixed-contact a{
+    min-height:56px;
+  }
+}
+
+@media (max-width:480px){
+  .event-program-card{
+    grid-template-columns:1fr;
+  }
+  .event-program-illust,
+  .selfcare-card .event-program-illust{
+    width:150px;
+    height:150px;
+    justify-self:center;
+  }
+}
+
+@media (max-width:360px){
+  .event-info-bar{
+    grid-template-columns:1fr;
+  }
+  .event-info-bar>div:first-child{
+    grid-column:auto;
+  }
+}
