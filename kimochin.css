@@ -97,6 +97,9 @@ body{
     justify-content:center;
     margin:-12px 0 18px;
   }
+  .kimochin-bow{
+    right:0;
+  }
   .closing-inner{
     grid-template-columns:100px 1fr 90px;
   }
