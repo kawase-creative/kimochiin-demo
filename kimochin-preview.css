@@ -1,4 +1,7 @@
 /* Character placement preview only. This stylesheet is not used by the live site. */
+body{
+  overflow-x:hidden;
+}
 .services-section .container{
   position:relative;
 }
